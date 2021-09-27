@@ -1,0 +1,83 @@
+.consig-icon {
+    height: 32px;
+    width: 32px;
+}
+
+.consig-icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.consig-icon-m {
+    width: 24px;
+    height: 24px;
+}
+
+.consig-logo {
+    content: url('../img/marca_horizontal_grande.png');
+    max-height: 70px;
+    width: auto;
+}
+
+.navbar {
+    padding: 0;
+}
+
+
+/* Página Inicial */
+.sec-1 {
+    background-image: url('/img/foto_01.jpg');
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec-1-img-textbox {
+    text-align: center;
+    padding: 30px;
+    margin-top: 290px;
+    width: 60vw;
+    color: #FFF;
+    background: transparent;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.sec-2 {
+    background-color: #E8E8E8;
+}
+
+.sec-2-text-1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10% 5%;
+}
+
+.sec-2-text-2 {
+    padding: 10% 5%;
+    font-size: 1.6em;
+    font-weight:lighter;
+}
+
+.sec-3 {
+    background-color: #FFF;
+}
+
+.sec-3>div>.col {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.sec-3-title {
+    font-size: 2em;
+}
+
+.sec-3-text {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.sec-3-img {
+    max-height: 20vw;
+}

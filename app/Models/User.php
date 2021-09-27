@@ -41,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getUsuariosComuns() {
+        $usuariosComuns = $this->select('id', 'name')->where('admin', '=', false)->orderBy('name')->get();
+        return $usuariosComuns;
+    }
+
+    public function projetos() {
+        return $this->hasMany('App\Models\Projeto');
+    }
 }
