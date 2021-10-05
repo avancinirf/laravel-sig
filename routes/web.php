@@ -20,8 +20,9 @@ Route::get('/', function () { return view('site.index'); })->name('site.index');
 Route::get('/contato', function () { return view('site.contato'); })->name('site.contato');
 Route::get('/sobre', function () { return view('site.sobre'); })->name('site.sobre');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
+// TODO: Refazer rota home para admin e clientes, ambos possuem acesso ao index e não passa por verificação
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 /* Rotas privadas da APP */
@@ -33,7 +34,7 @@ Route::prefix('/app')->middleware('auth')->group(function() {
 
 
 /* Rotas privadas da ÁREA DO CLIENTE */
-Route::prefix('/dashboard')->middleware('auth')->group(function() {
+Route::prefix('/dashboard')->middleware(['auth', 'verified'])->group(function() {
     Route::get('/meus-mapas', [App\Http\Controllers\MapaController::class, 'index'])->name('index.mapa');
     Route::get('/mapa/{id}', [App\Http\Controllers\MapaController::class, 'show'])->name('show.mapa');
 });
