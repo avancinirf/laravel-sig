@@ -78,8 +78,8 @@
                                             {{ __('Usuários') }}
                                         </a>
                                     @else
-                                        <a class="dropdown-item" href="/app/projeto">
-                                            {{ __('Mapas') }}
+                                        <a class="dropdown-item" href="/dashboard/meus-mapas">
+                                            {{ __('Meus Mapas') }}
                                         </a>
                                         <a class="dropdown-item" href="/app/arquivo">
                                             {{ __('Arquivos') }}

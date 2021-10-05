@@ -1,0 +1,18 @@
+/* MAPA */
+
+#mapa {
+    margin: 0px;
+    width: 100vw;
+    height: 80vh;
+    border: 1px solid black;
+}
+
+.btn-menu-mapa {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    z-index: 1005;
+    background-color: #f8fafc;
+    border-radius: 4px;
+}
+

@@ -32,6 +32,14 @@ Route::prefix('/app')->middleware('auth')->group(function() {
 });
 
 
+/* Rotas privadas da ÁREA DO CLIENTE */
+Route::prefix('/dashboard')->middleware('auth')->group(function() {
+    Route::get('/meus-mapas', [App\Http\Controllers\MapaController::class, 'index'])->name('index.mapa');
+    Route::get('/mapa/{id}', [App\Http\Controllers\MapaController::class, 'show'])->name('show.mapa');
+});
+
+
+
 /* Rota para teste do SENTRY */
 Route::get('/debug-sentry', function () {
     throw new Exception('Test Sentry error!');
