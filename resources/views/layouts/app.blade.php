@@ -74,6 +74,9 @@
                                         <a class="dropdown-item" href="/app/arquivo">
                                             {{ __('Arquivos') }}
                                         </a>
+                                        <a class="dropdown-item" href="/app/geometria">
+                                            {{ __('Geometrias') }}
+                                        </a>
                                         <a class="dropdown-item" href="/app/usuario">
                                             {{ __('Usuários') }}
                                         </a>

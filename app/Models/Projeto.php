@@ -47,5 +47,9 @@ class Projeto extends Model
         return $this->hasMany('App\Models\Arquivo');
     }
 
+    public function geometrias() {
+        return $this->hasMany('App\Models\Geometria');
+    }
+
 
 }

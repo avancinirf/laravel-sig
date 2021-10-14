@@ -49,7 +49,9 @@ class MapaController extends Controller
      */
     public function show($id)
     {
-        return view('dashboard.mapa.show');
+        $projeto = Projeto::with('geometrias')->with('arquivos')->find($id);
+
+        return view('dashboard.mapa.show', ['projeto' => $projeto]);
     }
 
     /**
