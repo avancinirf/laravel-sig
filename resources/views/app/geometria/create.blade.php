@@ -48,6 +48,11 @@
                                 <input type="file" class="form-control form-control-sm" name="arquivo" id="arquivo" value="{{old('arquivo')}}">
                             </div>
 
+                            <div class="form-group">
+                                <label for="geometria_arquivos">Selecione os arquivos para esta geometria</label>
+                                <select multiple class="form-control" id="geometria_arquivos" name="geometria_arquivos[]">
+                                </select>
+                            </div>
 
                             </br>
                             <a href="{{ route('geometria.index') }}" class="btn btn-sm px-3 btn-primary">Lista de geometrias</a>
@@ -58,4 +63,8 @@
             </div>
         </div>
     </div>
+
+    <!-- JS Mapa -->
+    <script src="{{ asset('js/geometria.js') }}"></script>
+
 @endsection

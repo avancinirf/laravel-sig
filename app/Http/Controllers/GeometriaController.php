@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Geometria;
+use App\Models\GeometriaArquivo;
 use App\Models\Projeto;
+use App\Models\Arquivo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -33,6 +35,8 @@ class GeometriaController extends Controller
     {
         $nomesProjetos = (new Projeto())->getNomesProjetos();
         return view('app.geometria.create', ['projetos' => $nomesProjetos]);
+        //$arquivos = Arquivo::all();
+        //return view('app.geometria.create', ['projetos' => $nomesProjetos, 'arquivos' => $arquivos]);
     }
 
     /**
@@ -57,6 +61,14 @@ class GeometriaController extends Controller
             'arquivo' => $file_urn
         ]);
 
+        $geometria_arquivo = new GeometriaArquivo;
+        foreach ($request->geometria_arquivos as $arquivo) {
+            $geometria_arquivo->create([
+                'geometria_id' => $geometria->id,
+                'arquivo_id' => $arquivo
+            ]);
+        }
+
         return redirect()->route('geometria.show', $geometria->id);
     }
 
@@ -68,8 +80,7 @@ class GeometriaController extends Controller
      */
     public function show($id)
     {
-        $geometria = $this->geometria->with('projeto')->find($id);
-
+        $geometria = $this->geometria->with('projeto')->with('arquivos')->find($id);
         if ($geometria === null) {
             return view('app.geometria.show');
         }
@@ -84,13 +95,12 @@ class GeometriaController extends Controller
      */
     public function edit($id)
     {
-        $geometria = $this->geometria->with('projeto')->find($id);
-
+        $geometria = $this->geometria->with('projeto')->with('arquivos')->find($id);
+        $arquivos = Arquivo::select('id', 'nome')->where('projeto_id', $geometria->projeto_id)->orderBy('nome')->get()->toarray();
         if (!$geometria) {
             return view('app.geometria');
         }
-
-        return view('app.geometria.edit', ['geometria' => $geometria]);
+        return view('app.geometria.edit', ['geometria' => $geometria, 'arquivos' => $arquivos]);
     }
 
     /**
@@ -102,7 +112,9 @@ class GeometriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $geometria = $this->geometria->find($id);
+        $geometria = $this->geometria->with('arquivos')->find($id);
+        $arquivos_antigos = $geometria->arquivos->modelKeys();
+
         if ( !$geometria ) {
             return view('app.geometria');
         }
@@ -133,6 +145,20 @@ class GeometriaController extends Controller
         $geometria->arquivo = $file_urn;
         $geometria->save();
 
+        $arquivos_para_remover = array_diff($arquivos_antigos, $request->geometria_arquivos);
+        $arquivos_para_adicionar = array_diff($request->geometria_arquivos, $arquivos_antigos);
+
+        foreach($arquivos_para_remover as $arquivo) {
+            $geometria_arquivo = GeometriaArquivo::where('geometria_id', $id)->where('arquivo_id', $arquivo)->delete();
+        }
+        foreach($arquivos_para_adicionar as $arquivo) {
+            $geometria_arquivo = new GeometriaArquivo;
+            $geometria_arquivo->create([
+                'geometria_id' => $id,
+                'arquivo_id' => $arquivo
+            ]);
+        }
+
         return redirect()->route('geometria.show', $geometria->id);
     }
 
@@ -146,7 +172,6 @@ class GeometriaController extends Controller
     {
         $geometria = $this->geometria->find($id);
         if ($geometria === null) {
-            dd('teste');
             return redirect()->route('geometria.index');
         }
         Storage::disk('local')->delete("/app/$geometria->arquivo");
@@ -167,6 +192,15 @@ class GeometriaController extends Controller
             $path = storage_path("/app/$geometria->arquivo");
             return response()->download($path, $geometria->nome);
         }
+    }
+
+    /**
+     *
+     */
+    public function getArquivosPorProjeto($projeto_id)
+    {
+        $arquivos = Arquivo::where('projeto_id', $projeto_id)->orderBy('nome')->get();
+        return json_decode($arquivos);
     }
 
 }

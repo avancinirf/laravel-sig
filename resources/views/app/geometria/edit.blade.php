@@ -57,6 +57,15 @@
                                 <input type="file" class="form-control form-control-sm" name="arquivo" id="arquivo" value="{{old('arquivo')}}">
                             </div>
 
+                            <div class="form-group">
+                                <label for="geometria_arquivos">Selecione os arquivos para esta geometria</label>
+                                <select multiple class="form-control" id="geometria_arquivos" name="geometria_arquivos[]">
+                                    @foreach($arquivos as $arquivo)
+                                        <option value="{{$arquivo['id']}}" {{ (in_array($arquivo['id'], $geometria->arquivos->modelKeys())) ? 'selected' : '' }} >{{$arquivo['nome']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             </br>
                             <a href="{{ route('geometria.index') }}" class="btn btn-sm px-3 btn-primary">Lista de geometrias</a>
                             <button type="submit" class="btn btn-sm px-3 btn-success float-right">Atualizar</button>

@@ -36,4 +36,8 @@ class Geometria extends Model
     public function projeto() {
         return $this->belongsTo('App\Models\Projeto');
     }
+
+    public function arquivos() {
+        return $this->belongsToMany('App\Models\Arquivo', 'geometria_arquivos');
+    }
 }

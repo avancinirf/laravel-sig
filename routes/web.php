@@ -28,10 +28,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /* Rotas privadas da APP */
 Route::prefix('/app')->middleware('auth')->group(function() {
     Route::resource('projeto', 'ProjetoController')->middleware('check.is.admin');
+
     Route::resource('arquivo', 'ArquivoController')->middleware('check.is.admin');
-    Route::resource('geometria', 'GeometriaController')->middleware('check.is.admin');
     Route::get('/arquivo/download/{id}', [App\Http\Controllers\ArquivoController::class, 'download'])->name('arquivo.download');
+
+    Route::resource('geometria', 'GeometriaController')->middleware('check.is.admin');
     Route::get('/geometria/download/{id}', [App\Http\Controllers\GeometriaController::class, 'download'])->name('geometria.download');
+    Route::get('/geometria/getArquivosPorProjeto/{id}', [App\Http\Controllers\GeometriaController::class, 'getArquivosPorProjeto'])->name('getArquivosPorProjeto');
 });
 
 

@@ -62,6 +62,13 @@
                             <hr/>
                             <p>Link para download: <a href="{{route('geometria.download', $geometria->id)}}">{{$geometria->nome}}</a></p>
                             <hr/>
+                            <h4>Arquivos associados</h4>
+                            <ul>
+                                @foreach($geometria->arquivos as $arquivo)
+                                    <li><a href="{{route('arquivo.download', $arquivo->id)}}">{{$arquivo->nome}}</a></li>
+                                @endforeach
+                            </ul>
+                            <hr/>
                         </fieldset>
                         <a href="{{ route('geometria.index') }}" class="btn btn-sm px-3 btn-primary">Lista de geometrias</a>
                     </div>

@@ -70,8 +70,18 @@
                 function (layer) {
                     let textoPopup = '';
                     for (const [key, value] of Object.entries(layer.feature.properties)) {
-                        textoPopup += `<label><b>${key}:</b> ${value}</label><br>`
+                        textoPopup += `<label><b>${key.toUpperCase()}:</b> ${value}</label><br>`
                     }
+                    if (kml.arquivos) {
+                        textoPopup += `<hr>
+                                        <label><b>ARQUIVOS</b></label>
+                                        <ul>`;
+                        kml.arquivos.forEach(function(arquivo) {
+                            textoPopup += `<li><a href="/app/arquivo/download/${arquivo.id}">${arquivo.nome}</a></li>`;
+                        });
+                        textoPopup += '</ul>';
+                    }
+
                     return textoPopup;
                 }
             );
