@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Divisa</name>
+    <Style id="poly-FFEA00-2000-0-normal">
+      <LineStyle>
+        <color>ff00eaff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>0000eaff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-FFEA00-2000-0-highlight">
+      <LineStyle>
+        <color>ff00eaff</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>0000eaff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-FFEA00-2000-0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-FFEA00-2000-0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-FFEA00-2000-0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>RECANTO DOS LAGOS </name>
+      <description><![CDATA[PROPRIETARIO: SER INFINITO LTDA<br>CERTIDAO_ESCRITURA: https://drive.google.com/file/d/1_EqVo74jIKX4INN3RCPPCPWoULXQKwc6/view?usp=sharing<br>CCIR: https://drive.google.com/file/d/1eAwTEM1xldhDrwDpu27o6GoymmXTHge3/view?usp=sharing<br>ITR: https://drive.google.com/file/d/1Bub7g-eIviT8CvtsZMZxl2KDxZhQNxlg/view?usp=sharing<br>SIGEF: https://drive.google.com/file/d/1l-z_HVMHPLbOMrcZMyyEroovzuQlMjdg/view?usp=sharing<br>CAR: https://drive.google.com/file/d/1kJjwQjVvj8-GpzQzd1DySIgxWXKVd4ds/view?usp=sharing]]></description>
+      <styleUrl>#poly-FFEA00-2000-0</styleUrl>
+      <ExtendedData>
+        <Data name="PROPRIETARIO">
+          <value>SER INFINITO LTDA</value>
+        </Data>
+        <Data name="CERTIDAO_ESCRITURA">
+          <value>https://drive.google.com/file/d/1_EqVo74jIKX4INN3RCPPCPWoULXQKwc6/view?usp=sharing</value>
+        </Data>
+        <Data name="CCIR">
+          <value>https://drive.google.com/file/d/1eAwTEM1xldhDrwDpu27o6GoymmXTHge3/view?usp=sharing</value>
+        </Data>
+        <Data name="ITR">
+          <value>https://drive.google.com/file/d/1Bub7g-eIviT8CvtsZMZxl2KDxZhQNxlg/view?usp=sharing</value>
+        </Data>
+        <Data name="SIGEF">
+          <value>https://drive.google.com/file/d/1l-z_HVMHPLbOMrcZMyyEroovzuQlMjdg/view?usp=sharing</value>
+        </Data>
+        <Data name="CAR">
+          <value>https://drive.google.com/file/d/1kJjwQjVvj8-GpzQzd1DySIgxWXKVd4ds/view?usp=sharing</value>
+        </Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -43.123072,-22.222108,0
+              -43.122983,-22.222166,0
+              -43.11979,-22.221814,0
+              -43.119437,-22.221019,0
+              -43.119479,-22.219544,0
+              -43.119668,-22.219297,0
+              -43.123143,-22.220454,0
+              -43.123147,-22.220751,0
+              -43.123166,-22.220807,0
+              -43.123179,-22.220818,0
+              -43.123248,-22.220821,0
+              -43.123282,-22.220861,0
+              -43.123305,-22.221039,0
+              -43.123321,-22.221207,0
+              -43.123341,-22.221296,0
+              -43.123409,-22.2214,0
+              -43.123535,-22.221508,0
+              -43.123606,-22.221605,0
+              -43.123604,-22.221671,0
+              -43.123481,-22.22187,0
+              -43.123293,-22.222003,0
+              -43.123072,-22.222108,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Arquivo;
+use App\Models\Projeto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ArquivoController extends Controller
 {
+    public function __construct(Arquivo $arquivo) {
+        $this->arquivo = $arquivo;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +20,8 @@ class ArquivoController extends Controller
      */
     public function index()
     {
-        //
+        $arquivos = $this->arquivo->orderBy('nome')->paginate(10);
+        return view('app.arquivo.index', ['arquivos' => $arquivos]);
     }
 
     /**
@@ -24,7 +31,8 @@ class ArquivoController extends Controller
      */
     public function create()
     {
-        //
+        $nomesProjetos = (new Projeto())->getNomesProjetos();
+        return view('app.arquivo.create', ['projetos' => $nomesProjetos]);
     }
 
     /**
@@ -35,51 +43,129 @@ class ArquivoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->arquivo->rules(), $this->arquivo->feedback());
+
+        $file = $request->file('arquivo');
+        $file_urn = $file->store("projeto/$request->projeto_id");
+
+        $arquivo = $this->arquivo->create([
+            'projeto_id' => $request->projeto_id,
+            'nome' => $request->nome,
+            'descricao' => $request->descricao,
+            'tipo' => $request->tipo,
+            'arquivo' => $file_urn
+        ]);
+
+        return redirect()->route('arquivo.show', $arquivo->id);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Arquivo  $arquivo
+     * @param  Insteger $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Arquivo $arquivo)
+    public function show($id)
     {
-        //
+        $arquivo = $this->arquivo->with('projeto')->find($id);
+
+        if ($arquivo === null) {
+            return view('app.arquivo.show');
+        }
+        return view('app.arquivo.show', ['arquivo' => $arquivo]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Arquivo  $arquivo
+     * @param  Insteger $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Arquivo $arquivo)
+    public function edit($id)
     {
-        //
+        $arquivo = $this->arquivo->with('projeto')->find($id);
+
+        if (!$arquivo) {
+            return view('app.arquivo');
+        }
+
+        return view('app.arquivo.edit', ['arquivo' => $arquivo]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Arquivo  $arquivo
+     * @param  Integer $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Arquivo $arquivo)
+    public function update(Request $request, $id)
     {
-        //
+        $arquivo = $this->arquivo->find($id);
+        if ( !$arquivo ) {
+            return view('app.arquivo');
+        }
+
+        if ($request->method() === 'PATCH') {
+            $dynamicRules = [];
+            foreach ($arquivo->rules() as $input => $rule) {
+                if (array_key_exists($input, $request->all())) {
+                    $dynamicRules[$input] = $rule;
+                }
+            }
+            $request->validate($dynamicRules, $arquivo->feedback());
+        } else {
+            $request->validate($arquivo->rules(), $arquivo->feedback());
+        }
+
+        if ($request->file('arquivo')) {
+            Storage::disk('local')->delete("/$arquivo->arquivo");
+            $file     = $request->file('arquivo');
+            $projeto_id  = $request->projeto_id ?? $arquivo->project_id;
+            $file_urn = $file->store("projeto/$request->projeto_id");
+
+        } else {
+            $file_urn = $arquivo->arquivo;
+        }
+
+        $arquivo->fill($request->all());
+        $arquivo->arquivo = $file_urn;
+        $arquivo->save();
+
+        return redirect()->route('arquivo.show', ['arquivo' => $arquivo->id]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Arquivo  $arquivo
+     * @param  Integer $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Arquivo $arquivo)
+    public function destroy($id)
     {
-        //
+        $arquivo = $this->arquivo->find($id);
+        if ($arquivo === null) {
+            return redirect()->route('arquivo.index');
+        }
+        Storage::disk('local')->delete("/app/$arquivo->arquivo");
+
+        $arquivo->delete();
+        return redirect()->route('arquivo.index');
+    }
+
+
+    /**
+     * Download de arquivos
+     */
+    public function download($id)
+    {
+        $arquivo = $this->arquivo->find($id);
+        $projeto = Projeto::find($arquivo->projeto_id);
+
+        if (auth()->user()->admin || auth()->user()->id == $projeto->user_id) {
+            $path = storage_path("/app/$arquivo->arquivo");
+            $nomeDownload = $arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1];
+            return response()->download($path, $nomeDownload);
+        }
     }
 }

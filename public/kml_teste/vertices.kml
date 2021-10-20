@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>vertices</name>
+    <Style id="icon-1500-BDBDBD-normal">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1500-BDBDBD-highlight">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1500-BDBDBD">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1500-BDBDBD-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1500-BDBDBD-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   0    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123072,-22.222108,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   1    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123293,-22.222003,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   2    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123481,-22.22187,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   3    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123604,-22.221671,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   4    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123606,-22.221605,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   5    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123535,-22.221508,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   6    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123409,-22.2214,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   7    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123341,-22.221296,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   8    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123321,-22.221207,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   9    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123305,-22.221039,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   10    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123282,-22.220861,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   11    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123248,-22.220821,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   14    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123147,-22.220751,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   15    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123143,-22.220454,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>LTRD-M-440</name>
+      <description><![CDATA[<img src="https://doc-10-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/fm9nbcv4tdc1sscstqeon2de7k/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbxprrtyqULrWjD_FIxpxZyPNs4N3ES_q0rsNsD_T2ief7eg9sx2jmnzNnqmZNvXuIDG2lr7Mq-t6VVJHnsCJ2sFXS0d2Eyizphofxs6zT4Ryw4b2YnXhGcC-BT2ciKfg_OMCa-OHxGeW51SJJpLyP_HJ7R7rDg2tQBP_Wb2nD41MgN-lEkf7jPYRhEXu16w04?session=0&fife" height="200" width="auto" /><br><br>LTRD-M-440 <br> <br> FID 16 <br> Name LTRD-M-440<br><br><img src="https://doc-14-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/b75t959b7erfhddgre1n929nrg/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vZJZX6qeqRasb6yOwhnQtQ9YHbWQrvQrQ578J5nl0CePlV5nvbVTivLm6dk3NRrA3k6HMqiQE8JbnUCB4vUEMgM8JwCr7B9OqpgIAimh1uG0iA_-SRO2Pygj7LaoMwhZYlck_IhyiIP8mzh9X7KA8DshnCI-dw6p4rfP6ewbqWfHPsBdYo_Hrh6gbALgEiba02B?session=0&fife" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value><![CDATA[https://doc-10-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/fm9nbcv4tdc1sscstqeon2de7k/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbxprrtyqULrWjD_FIxpxZyPNs4N3ES_q0rsNsD_T2ief7eg9sx2jmnzNnqmZNvXuIDG2lr7Mq-t6VVJHnsCJ2sFXS0d2Eyizphofxs6zT4Ryw4b2YnXhGcC-BT2ciKfg_OMCa-OHxGeW51SJJpLyP_HJ7R7rDg2tQBP_Wb2nD41MgN-lEkf7jPYRhEXu16w04?session=0&fife https://doc-14-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/b75t959b7erfhddgre1n929nrg/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vZJZX6qeqRasb6yOwhnQtQ9YHbWQrvQrQ578J5nl0CePlV5nvbVTivLm6dk3NRrA3k6HMqiQE8JbnUCB4vUEMgM8JwCr7B9OqpgIAimh1uG0iA_-SRO2Pygj7LaoMwhZYlck_IhyiIP8mzh9X7KA8DshnCI-dw6p4rfP6ewbqWfHPsBdYo_Hrh6gbALgEiba02B?session=0&fife]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.119668,-22.219297,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>LTRD-M-441</name>
+      <description><![CDATA[<img src="https://doc-04-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/975s94qv6fi9d1tuu74nmuu3rc/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbXDxWw6nGjeb0suKgE_fI1lopVdCpfZH0e1Q085-Xn9RzDQlh3i0EkoEqiHKuNnyYAmU1kym1_6jPG_pslp2Wj8jC6DyXWpwW7knMo4_M2X1IiSayqnA7RYBQ7JrgbXIdOL-4Z936_0LrhYeBTtbKlGdfBSe5gSr3h1iAsJcZlzglYmCsCNyaZ55Y5WGARiRr5?session=0&fife" height="200" width="auto" /><br><br>LTRD-M-441 <br> <br> FID 17 <br> Name LTRD-M-441]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value><![CDATA[https://doc-04-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/975s94qv6fi9d1tuu74nmuu3rc/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbXDxWw6nGjeb0suKgE_fI1lopVdCpfZH0e1Q085-Xn9RzDQlh3i0EkoEqiHKuNnyYAmU1kym1_6jPG_pslp2Wj8jC6DyXWpwW7knMo4_M2X1IiSayqnA7RYBQ7JrgbXIdOL-4Z936_0LrhYeBTtbKlGdfBSe5gSr3h1iAsJcZlzglYmCsCNyaZ55Y5WGARiRr5?session=0&fife]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.119479,-22.219544,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>LTRD-M-442</name>
+      <description><![CDATA[<img src="https://doc-0g-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/j0v9lc84jrq9p0bk9p2vh4nnm0/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vYnM6Ftodo8pCPQdo5ERr4xehC_EFzkx-yqwkj4F5Bz6j7WdidyRp33qZ5vaH_hFsGwTYmjYy3by0bhId9LmCp6I0A-Fyf-GLy103J5VAd7n9JpIAV5GQlxfe9tpGdNFDPRfW5JrMKQP5ACv_qY0IVFLxIHgJ9jBaWnge0OSttISNVfZK65iUGKNvC0WjiTsjiv?session=0&fife" height="200" width="auto" /><br><br>LTRD-M-442 <br> <br> FID 18 <br> Name LTRD-M-442<br><br><img src="https://doc-0o-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/n2bb2d6l2v2pnpnt64agfhsq7g/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vaYYtMNjVhop5VRD8wz6xO64BzURhq1QuXb-SgpPrR8u6VuxxqZ6VQO6x1_aOqf3cyFKxUdncwuZZmnakngeYIOeAuaMx0FrJFeS4uiZ8P2Fy3G2X2cjRaQGSHmymZT8iPwxmFQ9JJNkAUK3P8ZR2MKIU2iqpc6LYXvfRcWHTumZ0Cp0COwE4betEkEmOQwgCRG?session=0&fife" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value><![CDATA[https://doc-0g-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/j0v9lc84jrq9p0bk9p2vh4nnm0/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vYnM6Ftodo8pCPQdo5ERr4xehC_EFzkx-yqwkj4F5Bz6j7WdidyRp33qZ5vaH_hFsGwTYmjYy3by0bhId9LmCp6I0A-Fyf-GLy103J5VAd7n9JpIAV5GQlxfe9tpGdNFDPRfW5JrMKQP5ACv_qY0IVFLxIHgJ9jBaWnge0OSttISNVfZK65iUGKNvC0WjiTsjiv?session=0&fife https://doc-0o-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/n2bb2d6l2v2pnpnt64agfhsq7g/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vaYYtMNjVhop5VRD8wz6xO64BzURhq1QuXb-SgpPrR8u6VuxxqZ6VQO6x1_aOqf3cyFKxUdncwuZZmnakngeYIOeAuaMx0FrJFeS4uiZ8P2Fy3G2X2cjRaQGSHmymZT8iPwxmFQ9JJNkAUK3P8ZR2MKIU2iqpc6LYXvfRcWHTumZ0Cp0COwE4betEkEmOQwgCRG?session=0&fife]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.119437,-22.221019,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Marco de concreto</name>
+      <description><![CDATA[<img src="https://doc-0k-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/flfoskgcnu48j5gj3odku394rg/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vZE7ZTI7UPBJRVoXcxWDtuE-YOLFF85VseBmjpXxQVxdDeFIfP4zro2hcxbeQqfIRwEkxEfMFR3RHyui20ttrIx5T7Jxa6uMZTG_gx4JqKV2uplevs8iq2pU8ABbOXO88ek2d3XBRDsUB8mteTPwGnZ_isWaX_PKulfkYKv7fclx2HnsUvm02bAn8nyKhzJ4L0G?session=0&fife" height="200" width="auto" /><br><br>Marco de concreto <br> <br> FID 19 <br> Name Marco de concreto<br><br><img src="https://doc-0s-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/0os67ddf8pq1b497hs9r45aqj4/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbH-WLzw6gVyP_g86FBKig7PHrXQFORgyDFOQIfo9E1PqBltel0d5cMsVh0fNlAdX5mJ5aDfKNO6fJo4uImrXIcHL1C-22SWS-4gkCwumXJ3abh3q0WyYKwUMPhmNeQneSGyEv9Mqge7cIDbhoZ4M4yNzUPHzOY0hH1VZQO9mLecP3vkmF7HUqHhIqkMT05hSvG?session=0&fife" height="200" width="auto" />]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <ExtendedData>
+        <Data name="gx_media_links">
+          <value><![CDATA[https://doc-0k-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/flfoskgcnu48j5gj3odku394rg/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vZE7ZTI7UPBJRVoXcxWDtuE-YOLFF85VseBmjpXxQVxdDeFIfP4zro2hcxbeQqfIRwEkxEfMFR3RHyui20ttrIx5T7Jxa6uMZTG_gx4JqKV2uplevs8iq2pU8ABbOXO88ek2d3XBRDsUB8mteTPwGnZ_isWaX_PKulfkYKv7fclx2HnsUvm02bAn8nyKhzJ4L0G?session=0&fife https://doc-0s-60-mymaps.googleusercontent.com/untrusted/hostedimage/1r0r03ib9f4ps2b1fhk0agj9lk/0os67ddf8pq1b497hs9r45aqj4/1633891255750/R9zfOfEZQ0S7W986X6wbOgFNLQBv_7P3/16124574184273233577/5AIsG_vbH-WLzw6gVyP_g86FBKig7PHrXQFORgyDFOQIfo9E1PqBltel0d5cMsVh0fNlAdX5mJ5aDfKNO6fJo4uImrXIcHL1C-22SWS-4gkCwumXJ3abh3q0WyYKwUMPhmNeQneSGyEv9Mqge7cIDbhoZ4M4yNzUPHzOY0hH1VZQO9mLecP3vkmF7HUqHhIqkMT05hSvG?session=0&fife]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>
+          -43.11979,-22.221814,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Marco de concreto</name>
+      <description><![CDATA[Marco de concreto    <br>       <br>   FID   20    <br>   Name   Marco de concreto]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.122983,-22.222166,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>ponto de Cerca</name>
+      <description><![CDATA[ponto de Cerca    <br>       <br>   FID   21    <br>   Name   ponto de Cerca]]></description>
+      <styleUrl>#icon-1500-BDBDBD</styleUrl>
+      <Point>
+        <coordinates>
+          -43.123072,-22.222108,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

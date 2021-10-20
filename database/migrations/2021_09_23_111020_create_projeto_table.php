@@ -13,8 +13,14 @@ class CreateProjetoTable extends Migration
      */
     public function up()
     {
-        Schema::create('projeto', function (Blueprint $table) {
+        Schema::create('projetos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->string('nome', '100')->unique();
+            $table->text('descricao')->nullable();
+            $table->date('iniciado_em')->nullable();
+            $table->date('finalizado_em')->nullable();
+            $table->boolean('publico')->default(false);
             $table->timestamps();
         });
     }

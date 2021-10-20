@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Cabanas</name>
+    <Style id="icon-1899-DB4436-normal">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-DB4436-highlight">
+      <IconStyle>
+        <color>ff3644db</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-DB4436">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-DB4436-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-DB4436-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Cabanas aprovadas pela Karla</name>
+      <description><![CDATA[Cabanas aprovadas pela Karla    <br>       <br>   FID   0    <br>   Name   Cabanas aprovadas pela Karla    <br>   SymbolID   2    <br>   PopupInfo   descrição: próxima das Ocas.<br>Name: <br>Descript: <br>Type: <br>Comment: Aprovada pela Karla<br>Symbol: <br>DateTimeS: <br>Elevation:    <br>   legenda   Cabanas aprovadas pela Karla]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.122124,-22.22071,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reprovadas pela proximidade da divisa</name>
+      <description><![CDATA[Cabanas reprovadas pela proximidade da divisa    <br>       <br>   FID   1    <br>   Name   Cabanas reprovadas pela proximidade da divisa    <br>   SymbolID   4    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.119567,-22.220462,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reprovadas pela proximidade da divisa</name>
+      <description><![CDATA[Cabanas reprovadas pela proximidade da divisa    <br>       <br>   FID   2    <br>   Name   Cabanas reprovadas pela proximidade da divisa    <br>   SymbolID   4    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.11978,-22.219437,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reprovadas pela proximidade da divisa</name>
+      <description><![CDATA[Cabanas reprovadas pela proximidade da divisa    <br>       <br>   FID   3    <br>   Name   Cabanas reprovadas pela proximidade da divisa    <br>   SymbolID   4    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120088,-22.219498,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   4    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.119855,-22.221364,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas aprovadas pela Karla</name>
+      <description><![CDATA[Cabanas aprovadas pela Karla    <br>       <br>   FID   5    <br>   Name   Cabanas aprovadas pela Karla    <br>   SymbolID   2    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120068,-22.220456,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas aprovadas pela Karla</name>
+      <description><![CDATA[Cabanas aprovadas pela Karla    <br>       <br>   FID   6    <br>   Name   Cabanas aprovadas pela Karla    <br>   SymbolID   2    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.121372,-22.220448,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   7    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120018,-22.221624,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   8    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120193,-22.221372,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   9    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.12066,-22.221464,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   10    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120384,-22.221618,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas 1 reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo <br> <br> FID 11 <br> Name Cabanas reposicionadas pelo Leonardo <br> SymbolID 3 <br> PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120953,-22.221699,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabanas reposicionadas pelo Leonardo</name>
+      <description><![CDATA[Cabanas reposicionadas pelo Leonardo    <br>       <br>   FID   12    <br>   Name   Cabanas reposicionadas pelo Leonardo    <br>   SymbolID   3    <br>   PopupInfo]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120976,-22.221394,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cabana sugerida pela Karla</name>
+      <description><![CDATA[Cabana sugerida pela Karla    <br>       <br>   FID   13    <br>   Name   Cabana sugerida pela Karla    <br>   SymbolID   7    <br>   PopupInfo       <br>   legenda   Cabana sugerida pela Karla]]></description>
+      <styleUrl>#icon-1899-DB4436</styleUrl>
+      <Point>
+        <coordinates>
+          -43.120777,-22.220817,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
