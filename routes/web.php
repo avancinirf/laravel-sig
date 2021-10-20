@@ -23,7 +23,7 @@ Route::get('/sobre', function () { return view('site.sobre'); })->name('site.sob
 Auth::routes(['verify' => true]);
 
 // TODO: Refazer rota home para admin e clientes, ambos possuem acesso ao index e não passa por verificação
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 
 /* Rotas privadas da APP */
 Route::prefix('/app')->middleware('auth')->group(function() {

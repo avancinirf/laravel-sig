@@ -22,6 +22,8 @@
 
     <!-- Custom Styles Consig-site -->
     <link href="{{ asset('css/consig-site.css') }}" rel="stylesheet">
+    <!-- Custom Styles Consig-sistema -->
+    <link href="{{ asset('css/consig-sistema.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

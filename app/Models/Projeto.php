@@ -9,6 +9,8 @@ class Projeto extends Model
 {
     use HasFactory;
     protected $fillable = ['user_id', 'nome', 'descricao', 'iniciado_em', 'finalizado_em', 'publico'];
+    protected $dates = ['iniciado_em', 'finalizado_em'];
+
 
     public function rules($id = 'NULL') {
         return [

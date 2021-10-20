@@ -74,10 +74,12 @@
                     }
                     if (kml.arquivos) {
                         textoPopup += `<hr>
-                                        <label><b>ARQUIVOS</b></label>
-                                        <ul>`;
+                                        <label><b>ARQUIVOS RELACIONADOS</b></label>
+                                        <ul class="map-popul-list">`;
                         kml.arquivos.forEach(function(arquivo) {
-                            textoPopup += `<li><a href="/app/arquivo/download/${arquivo.id}">${arquivo.nome}</a></li>`;
+                            const nome = `${arquivo.nome}.${arquivo.arquivo.split('.')[1]}`;
+                            textoPopup += `<li><a href="/app/arquivo/download/${arquivo.id}"><i class="bi bi-box-arrow-down"></i></a> ${nome}</li>`;
+                            textoPopup += `<li><a href="/app/arquivo/download/${arquivo.id}"><i class="bi bi-box-arrow-down"></i></a> ${nome}</li>`;
                         });
                         textoPopup += '</ul>';
                     }

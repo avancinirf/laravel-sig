@@ -60,7 +60,7 @@
                                 <input type="text" class="form-control" value="{{ $arquivo->updated_at }}" >
                             </div>
                             <hr/>
-                            <p>Link para download: <a href="{{route('arquivo.download', $arquivo->id)}}">{{$arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1]}}</a></p>
+                            <p><a class="link-download-show-elementos" href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a>{{$arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1]}}</p>
                             <hr/>
                         </fieldset>
                         <a href="{{ route('arquivo.index') }}" class="btn btn-sm px-3 btn-primary">Lista de arquivos</a>

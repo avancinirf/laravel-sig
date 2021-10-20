@@ -67,10 +67,11 @@
                             @if (count($projeto->arquivos) == 0)
                                 Nenhum arquivo associado ao projeto.
                             @else
-                                <ul>
+                                <h5 class="text-center">ARQUIVOS RELACIONADOS</h5>
+                                <ul class="lista-show-elementos">
                                 @foreach ($projeto->arquivos as $arquivo)
                                     <!--<li>( ID: {{$arquivo->id}} ) - {{$arquivo->nome}} - <a href="{{asset('storage/'.$arquivo->arquivo)}}">{{$arquivo->nome}}</a></li>-->
-                                    <li>{{ucfirst($arquivo->tipo)}}: <a href="{{route('arquivo.download', $arquivo->id)}}">{{$arquivo->nome}}</a></li>
+                                    <li><a href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a> {{ $arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1] }}</li>
                                 @endforeach
                                 </ul>
                             @endif
