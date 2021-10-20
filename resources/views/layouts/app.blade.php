@@ -22,6 +22,8 @@
 
     <!-- Custom Styles Consig-site -->
     <link href="{{ asset('css/consig-site.css') }}" rel="stylesheet">
+    <!-- Custom Styles Consig-sistema -->
+    <link href="{{ asset('css/consig-sistema.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -74,12 +76,15 @@
                                         <a class="dropdown-item" href="/app/arquivo">
                                             {{ __('Arquivos') }}
                                         </a>
+                                        <a class="dropdown-item" href="/app/geometria">
+                                            {{ __('Geometrias') }}
+                                        </a>
                                         <a class="dropdown-item" href="/app/usuario">
                                             {{ __('Usuários') }}
                                         </a>
                                     @else
-                                        <a class="dropdown-item" href="/app/projeto">
-                                            {{ __('Mapas') }}
+                                        <a class="dropdown-item" href="/dashboard/meus-mapas">
+                                            {{ __('Meus Mapas') }}
                                         </a>
                                         <a class="dropdown-item" href="/app/arquivo">
                                             {{ __('Arquivos') }}

@@ -56,7 +56,7 @@ class ArquivoController extends Controller
             'arquivo' => $file_urn
         ]);
 
-        return redirect()->route('arquivo.show', ['arquivo' => $arquivo->id]);
+        return redirect()->route('arquivo.show', $arquivo->id);
     }
 
     /**
