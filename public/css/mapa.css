@@ -101,14 +101,53 @@ body {
     min-height: 71px;
 }
 
-#modal-menu-mapa-body p {
-    margin-bottom: 6px;
-    font-size: 1.1em;
+/* MODAL POPUP */
+#modal-layer-mapa-body {
+    padding: 10px 20px 50px 20px;
 }
 
+.modal-layer-mapa-body-subtitulo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
 
+.modal-layer-mapa-body-label {
+    width: 100%;
+    margin: 0px;
+    padding: 4px 0px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.modal-layer-mapa-body-label:hover {
+    background: #eeeeee;
+}
+
+.modal-menu-mapa-body-subtitulo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.modal-menu-mapa-body-label {
+    width: 100%;
+    margin: 0px;
+    padding: 4px 0px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.modal-menu-mapa-body-label:hover {
+    background: #eeeeee;
+}
+
+/* TODO: Remover se não for mais usar o popup original */
 /* LEAFLET POPUP */
-
+/*
 .leaflet-popup-content-wrapper {
     border-radius: 5px;
     background: rgba(255,255,255,0.85);
@@ -133,20 +172,35 @@ body {
 	color: darkred;
 }
 
-.map-popul-list {
+.map-popup-list, .map-menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.map-popul-list li {
+.map-popup-list li, .map-menu-list li {
+    text-align: center;
+    width: 100%;
+    margin: 0px !important;
+    padding: 4px 0px;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
     font-size: 1.1em;
     margin-bottom: 4px;
 }
 
-.map-popul-list li i {
+.map-popup-list li:hover, .map-menu-list li:hover {
+    background: #eeeeee;
+}
+
+.map-popup-list li i, .map-menu-list li i{
     font-size: 1.3em;
     vertical-align: middle;
-    padding: 0 4px;
+    margin-right: 12px;
     color: #000;
 }
+
+.map-popup-list a, .map-menu-list a {
+    color: #000;
+}
+*/
