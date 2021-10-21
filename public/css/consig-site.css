@@ -49,14 +49,14 @@
 }
 
 .sec-2-text-1 {
-    font-size: 1.9em;
+    font-size: 1.9rem;
     font-weight: bold;
     padding: 10% 5%;
 }
 
 .sec-2-text-2 {
     padding: 10% 5%;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     font-weight:lighter;
 }
 
@@ -70,11 +70,11 @@
 }
 
 .sec-3-title {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .sec-3-text {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 0;
 }
 

@@ -45,6 +45,10 @@
 	padding: 15px 15px 80px;
 }
 
+.modal-body {
+	padding: 0px;
+}
+
 .modal.right.fade .modal-dialog {
 	left: -320px;
 	-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -103,13 +107,13 @@ body {
 
 /* MODAL POPUP */
 #modal-layer-mapa-body {
-    padding: 10px 20px 50px 20px;
+    padding: 10px 0px 50px 0px;
 }
 
 .modal-layer-mapa-body-subtitulo {
     width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 10px;
@@ -118,18 +122,18 @@ body {
 .modal-layer-mapa-body-label {
     width: 100%;
     margin: 0px;
-    padding: 4px 0px;
-    border-bottom: 1px solid #eeeeee;
+    padding: 4px 15px;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.85);
 }
 
 .modal-layer-mapa-body-label:hover {
-    background: #eeeeee;
+    background: rgba(238, 238, 238, 0.85);
 }
 
 .modal-menu-mapa-body-subtitulo {
     width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 25px 0;
 }
@@ -137,12 +141,45 @@ body {
 .modal-menu-mapa-body-label {
     width: 100%;
     margin: 0px;
-    padding: 4px 0px;
-    border-bottom: 1px solid #eeeeee;
+    padding: 5px 20px;
+    border-top: 1px solid rgba(238, 238, 238, 0.85);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.85);
 }
 
 .modal-menu-mapa-body-label:hover {
-    background: #eeeeee;
+    background: rgba(238, 238, 238, 0.85);
+}
+
+.modal-map-popup-list, .modal-map-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-map-popup-list li, .modal-map-menu-list li {
+    text-align: center;
+    width: 100%;
+    margin: 0px !important;
+    padding: 4px 0px;
+    border-top: 1px solid rgba(238, 238, 238, 0.85);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.85);
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+.modal-map-popup-list li:hover, .modal-map-menu-list li:hover {
+    background: rgba(238, 238, 238, 0.85);
+}
+
+.modal-map-popup-list li i, .modal-map-menu-list li i {
+    font-size: 1.3em;
+    vertical-align: middle;
+    margin-right: 12px;
+    color: #303030;
+}
+
+.modal-map-popup-list a, .modal-map-menu-list a {
+    color: #303030;
 }
 
 /* TODO: Remover se não for mais usar o popup original */

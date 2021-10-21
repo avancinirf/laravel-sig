@@ -1,5 +1,5 @@
 .link-download-show-elementos {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     vertical-align: middle;
     padding: 0 4px;
     color: #000;
@@ -12,12 +12,12 @@
 }
 
 .lista-show-elementos li {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     margin-bottom: 4px;
 }
 
 .lista-show-elementos li i {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     vertical-align: middle;
     padding: 0 4px;
     color: #000;
@@ -56,4 +56,17 @@
 
 .dashboard-card-consumo-dados {
     background: rgba(219, 68, 55, 0.7);
+}
+
+
+/* loading */
+#spinner-sistema {
+    display: block;
+    position: fixed;
+    width: 8rem;
+    height: 8rem;
+    z-index: 2000; /* High z-index so it is on top of the page */
+    top: calc( 50% - ( 8rem / 2) ); /* where ... is the element's height */
+    right: calc( 50% - ( 8rem / 2) ); /* where ... is the element's width */
+    display: none;
 }

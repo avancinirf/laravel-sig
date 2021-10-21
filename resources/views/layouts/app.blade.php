@@ -112,6 +112,11 @@
         </nav>
 
         <main class="py-0">
+
+        <div id="spinner-sistema" class="spinner-grow text-info" role="status">
+            <span class="sr-only" >Loading...</span>
+        </div>
+
             @yield('content')
         </main>
     </div>

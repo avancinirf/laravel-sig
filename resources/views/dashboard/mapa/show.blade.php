@@ -48,7 +48,7 @@
                     <br><br>
                     @if(count($projeto->arquivos) > 0)
                         <label class="modal-menu-mapa-body-subtitulo"><b>ARQUIVOS RELACIONADOS</b></label>
-                        <ul class="map-menu-list">
+                        <ul class="modal-map-menu-list">
                             @foreach($projeto->arquivos as $arquivo)
                                 <a href="/app/arquivo/download/{{$arquivo->id}}"><li><i class="bi bi-box-arrow-down"></i> {{$arquivo->nome}} </li></a>
                             @endforeach
@@ -56,13 +56,13 @@
                     @endif
                     @if(count($projeto->geometrias) > 0)
                         <label class="modal-menu-mapa-body-subtitulo"><b>GEOMETRIAS RELACIONADOS</b></label>
-                        <ul class="map-menu-list">
+                        <ul class="modal-map-menu-list">
                             @foreach($projeto->geometrias as $geometria)
                                 <a href="/app/GEOMETRIA/download/{{$geometria->id}}"><li><i class="bi bi-box-arrow-down"></i> {{$geometria->nome}} </li></a>
                             @endforeach
                         </ul>
                     @endif
-
+                    <br><br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-sm btn-secondary btn-block" data-dismiss="modal">Fechar</button>

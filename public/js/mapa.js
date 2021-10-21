@@ -68,10 +68,6 @@
         //omnivore.kml('http://consigsa.test/app/geometria/download/2').addTo(map);
         */
 
-        function mostrarDados() {
-            //console.log('teste 1');
-        }
-
         // Adiciona todos os arquivos kml no mapa
         projeto.geometrias.forEach(kml => {
             overlayMaps[kml.nome] = omnivore.kml(`http://consigsa.test/app/geometria/download/${kml.id}`)
@@ -132,15 +128,16 @@
 
         function preencheModalLayer(nomeGeometria, geometria, atributos) {
 
+            if (nomeGeometria.split('.')[0] == $modalLayerTitle.html()) return;
+
             let textoModalBody = '';
 
             for (const [key, value] of Object.entries(atributos)) {
                 textoModalBody += `<label class="modal-layer-mapa-body-label"><b>${key.toUpperCase()}:</b> ${value}</label><br>`;
             }
             if (geometria.arquivos) {
-                textoModalBody += `
-                                <label class="modal-layer-mapa-body-subtitulo"><b>ARQUIVOS RELACIONADOS</b></label>
-                                <ul class="map-popup-list">`;
+                textoModalBody += `<label class="modal-layer-mapa-body-subtitulo"><b>ARQUIVOS RELACIONADOS</b></label>
+                                    <ul class="modal-map-popup-list">`;
                 geometria.arquivos.forEach(function(arquivo) {
                     const nome = `${arquivo.nome}.${arquivo.arquivo.split('.')[1]}`;
                     textoModalBody += `<a href="/app/arquivo/download/${arquivo.id}"><li><i class="bi bi-box-arrow-down"></i> ${nome}</li></a>`;
@@ -150,7 +147,6 @@
 
             if (!nomeGeometria.length) nomeGeometria = 'Nome da geometria não informado!!!';
             if (!atributos.length && !geometria.arquivos.length) textoModalBody = 'Nenhuma informação ou arquivo disponível para a geometria selecionada!!!';
-
 
             $modalLayerTitle.html(nomeGeometria.split('.')[0]);
             $modalLayerBody.html(textoModalBody);
