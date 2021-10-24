@@ -20,8 +20,8 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">Descrição</th>
                                     <th scope="col">Tipo</th>
+                                    <th scope="col">Arquivo (nome original)</th>
                                     <th scope="col">Criado em</th>
                                     <th scope="col">Atualizado em</th>
                                     <th scope="col">Ações</th>
@@ -32,8 +32,8 @@
                                 <tr>
                                     <th scope="row">{{ $arquivo->id }}</th>
                                     <td>{{ $arquivo->nome }}</td>
-                                    <td>{{ $arquivo->descricao }}</td>
                                     <td>{{ $arquivo->tipo }}</td>
+                                    <td><a href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a> {{ $arquivo->nome_original }}</td>
                                     <td>
                                         @if ($arquivo->created_at)
                                             {{ date('d/m/Y', strtotime($arquivo->created_at)) }}

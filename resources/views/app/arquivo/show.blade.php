@@ -36,12 +36,12 @@
                                 <input type="text" class="form-control form-control-sm" value="{{ $arquivo->id }}">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Nome</label>
-                                <input type="text" class="form-control form-control-sm" value="{{ $arquivo->nome }}">
-                            </div>
-                            <div class="form-group">
                                 <label class="form-label">Projeto</label>
                                 <input type="text" class="form-control form-control-sm" value="{{ $arquivo->projeto->nome }}( ID: {{$arquivo->projeto_id}})">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control form-control-sm" value="{{ $arquivo->nome }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Descrição</label>
@@ -60,7 +60,7 @@
                                 <input type="text" class="form-control" value="{{ $arquivo->updated_at }}" >
                             </div>
                             <hr/>
-                            <p><a class="link-download-show-elementos" href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a>{{$arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1]}}</p>
+                            <p><a class="link-download-show-elementos" href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a>{{$arquivo->nome_original}}</p>
                             <hr/>
                         </fieldset>
                         <a href="{{ route('arquivo.index') }}" class="btn btn-sm px-3 btn-primary">Lista de arquivos</a>

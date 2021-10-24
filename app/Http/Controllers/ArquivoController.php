@@ -45,15 +45,16 @@ class ArquivoController extends Controller
     {
         $request->validate($this->arquivo->rules(), $this->arquivo->feedback());
 
-        $file = $request->file('arquivo');
+        $file = $request->file('file');
         $file_urn = $file->store("projeto/$request->projeto_id");
 
         $arquivo = $this->arquivo->create([
             'projeto_id' => $request->projeto_id,
             'nome' => $request->nome,
+            'nome_original' => $file->getClientOriginalName(),
             'descricao' => $request->descricao,
             'tipo' => $request->tipo,
-            'arquivo' => $file_urn
+            'file' => $file_urn
         ]);
 
         return redirect()->route('arquivo.show', $arquivo->id);
@@ -118,18 +119,7 @@ class ArquivoController extends Controller
             $request->validate($arquivo->rules(), $arquivo->feedback());
         }
 
-        if ($request->file('arquivo')) {
-            Storage::disk('local')->delete("/$arquivo->arquivo");
-            $file     = $request->file('arquivo');
-            $projeto_id  = $request->projeto_id ?? $arquivo->project_id;
-            $file_urn = $file->store("projeto/$request->projeto_id");
-
-        } else {
-            $file_urn = $arquivo->arquivo;
-        }
-
         $arquivo->fill($request->all());
-        $arquivo->arquivo = $file_urn;
         $arquivo->save();
 
         return redirect()->route('arquivo.show', ['arquivo' => $arquivo->id]);
@@ -163,9 +153,8 @@ class ArquivoController extends Controller
         $projeto = Projeto::find($arquivo->projeto_id);
 
         if (auth()->user()->admin || auth()->user()->id == $projeto->user_id) {
-            $path = storage_path("/app/$arquivo->arquivo");
-            $nomeDownload = $arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1];
-            return response()->download($path, $nomeDownload);
+            $path = storage_path("/app/$arquivo->file");
+            return response()->download($path, $arquivo->nome_original);
         }
     }
 }

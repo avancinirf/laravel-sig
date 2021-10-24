@@ -14,7 +14,13 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header"><h4><b>Editar projeto</b></h4></div>
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="bi-pencil mr-3"></i> <b>Projeto: {{ $projeto->nome }}</b>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('projeto.create') }}">
+                                <i class="bi-plus-lg"></i>
+                            </a>
+                        </h4>
+                    </div>
 
                     <div class="card-body">
                         @if (!isset($projeto))
@@ -30,19 +36,17 @@
                                 <input type="number" class="form-control form-control-sm" name="id" id="id" value="{{ $projeto->id }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Nome</label>
-                                <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="{{ $projeto->nome }}">
+                                <label class="form-label">Tipo</label>
+                                <input type="text" class="form-control form-control-sm" name="tipo" id="tipo" value="{{ $projeto->tipo }}" readonly>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Usuário</label>
-                                <select class="form-control form-control-sm" name="user_id" id="user_id">
-                                <option value="" selected disabled>Selecione um usuário...</option>
-                                    @foreach ($usuarios as $usuario)
-                                        <option value="{{$usuario->id}}"
-                                            {{ ($usuario->id == $projeto->user_id) ? 'selected' : ''}}
-                                        >{{$usuario->name}}</option>
-                                    @endforeach
-                                </select>
+                                <input type="text" class="form-control form-control-sm" value="{{ $projeto->user->name }}" readonly>
+                                <input type="text" class="form-control form-control-sm" name="user_id" value="{{ $projeto->user_id }}" hidden>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="{{ $projeto->nome }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Descrição</label>

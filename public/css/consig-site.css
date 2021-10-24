@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+.icone-midia-social {
+    padding: 0;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+
 .consig-icon {
     height: 32px;
     width: 32px;
@@ -34,9 +46,18 @@
     background-size: cover;
 }
 
+.sec-1-title {
+    margin-left: 10%;
+    text-shadow: 1px 1px #363636;
+}
+
+.sec-1-title strong {
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px #363636;
+}
+
 .sec-1-img-textbox {
-    text-align: center;
-    padding: 30px;
+    padding: 2%;
     margin-top: 290px;
     width: 60vw;
     color: #FFF;
@@ -45,32 +66,42 @@
 }
 
 .sec-2 {
+    font-family: 'Roboto', sans-serif;
     background-color: #E8E8E8;
+    padding: 10% 2%;
+}
+
+.sec-2 col {
+    padding: 0px 3%;
 }
 
 .sec-2-text-1 {
-    font-size: 1.9rem;
-    font-weight: bold;
-    padding: 10% 5%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 0px 5%;
 }
 
 .sec-2-text-2 {
-    padding: 10% 5%;
-    font-size: 1.6rem;
+    padding: 0px 5%;
+    font-size: 1.5rem;
     font-weight:lighter;
+    text-align: justify;
 }
 
 .sec-3 {
     background-color: #FFF;
+    padding-top: 8%;
+    padding-bottom: 8%;
 }
 
 .sec-3>div>.col {
     margin-left: 5%;
-    margin-top: 5%;
 }
 
 .sec-3-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .sec-3-text {
@@ -81,3 +112,181 @@
 .sec-3-img {
     max-height: 20vw;
 }
+
+.sec-3-btn-saiba-mais {
+
+}
+
+.sec-4 {
+    background-color: #D1E8E2;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.sec-4-col-1 {
+    padding: 10%;
+}
+
+.sec-4-col-2 {
+    padding: 10% 10% 10% 0;
+}
+
+.sec-4-title {
+    font-size: 1.7rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px #363636;
+}
+
+.sec-4-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sec-4-img {
+    box-shadow: 8px 8px rgba(0,0,0,.25);
+}
+
+
+.sec-5 {
+    background-image: url('/img/foto_05.jpg');
+    height: 500px;
+    padding: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sec-5-title {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #363636;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.sec-5-text {
+    color: #FFFFFF;
+    text-shadow: 1px 1px #363636;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.sec-6 {
+    font-family: 'Roboto', sans-serif;
+    padding: 5% 5%;
+}
+
+.sec-6-col-1 {
+    padding: 7% 5%;
+    text-align: justify;
+
+}
+
+.sec-6-col-2 {
+    border-left: 1px solid #A9A9A9;
+    padding: 3% 5%;
+}
+
+.sec-6-title {
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+
+.sec-6-text {
+    font-size: 1rem;
+    font-weight:lighter;
+    text-align: justify;
+}
+
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    background-color: #E8E8E8;
+    padding: 5%;
+}
+
+
+.footer-col-1 {
+
+}
+
+.footer-col-2 {
+
+}
+
+.footer-col-3 {
+
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.footer-text {
+    display: block;
+}
+
+
+/* PAGINA SERVIÇOS */
+
+/* Página Inicial */
+.sec-servicos {
+    background-image: url('/img/foto_06.jpg');
+    min-height: 700px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.sec-servicos-lista {
+    list-style: none;
+    margin-top: 5%;
+}
+
+.sec-servicos-lista a {
+    text-decoration: none;
+}
+
+.sec-servicos-lista li {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin: 20px;
+    padding: 25px;
+    color: #FFF;
+    background: transparent;
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid #E8E8E8;
+}
+
+.sec-servicos-lista li:hover {
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.sec-servicos-title {
+    margin-left: 10%;
+    text-shadow: 1px 1px #363636;
+}
+
+.sec-1-titleAAA strong {
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 1px 1px #363636;
+}
+
+.sec-1-img-textboxAAA {
+    padding: 2%;
+    margin-top: 290px;
+    width: 60vw;
+    color: #FFF;
+    background: transparent;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+/* FIM PAGINA SERVIÇOS */

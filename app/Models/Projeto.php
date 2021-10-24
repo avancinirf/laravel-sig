@@ -8,13 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Projeto extends Model
 {
     use HasFactory;
-    protected $fillable = ['user_id', 'nome', 'descricao', 'iniciado_em', 'finalizado_em', 'publico'];
-    protected $dates = ['iniciado_em', 'finalizado_em'];
-
+    protected $fillable = ['user_id', 'tipo', 'nome', 'descricao', 'iniciado_em', 'finalizado_em', 'publico'];
 
     public function rules($id = 'NULL') {
         return [
             'user_id'       => 'required|exists:users,id',
+            'tipo'          => 'required',
             'nome'          => "required|unique:projetos,nome,{$id}|min:6|max:100",
             'descricao'     => 'max:1000',
             'iniciado_em'   => 'date|nullable',
@@ -26,6 +25,7 @@ class Projeto extends Model
     public function feedback() {
         return [
             'user_id.required' => 'O campo usuário é obrigatório',
+            'tipo.required'    => 'O campo :attribute é obrigatório.',
             'required'         => 'O campo :attribute é obrigatório.',
             'nome.unique'      => 'Nome do projeto já existe',
             'nome.min'         => 'Nome deve conter no mínimo 10 caracteres.',

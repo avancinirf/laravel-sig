@@ -14,8 +14,13 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header"><h4><b>Editar arquivo</b></h4></div>
-
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="bi-pencil mr-3"></i> <b>Arquivo: {{ $arquivo->nome }}</b>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('arquivo.create') }}">
+                                <i class="bi-plus-lg"></i>
+                            </a>
+                        </h4>
+                    </div>
                     <div class="card-body">
                         @if (!isset($arquivo))
                         <div class="alert alert-danger" role="alert">
@@ -30,13 +35,13 @@
                                 <input type="number" class="form-control form-control-sm" name="id" id="id" value="{{ $arquivo->id }}" readonly>
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Nome</label>
-                                <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="{{ $arquivo->nome }}">
-                            </div>
-                            <div class="form-group">
                                 <label class="form-label">Projeto</label>
                                 <input type="hidden" name="projeto_id" value="{{$arquivo->projeto_id}}">
                                 <input type="text" class="form-control form-control-sm" value="{{ $arquivo->projeto->nome }} ( ID: {{$arquivo->projeto_id}} )" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control form-control-sm" name="nome" id="nome" value="{{ $arquivo->nome }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Descrição</label>
@@ -52,10 +57,6 @@
                                     <option value="geometria" {{ ($arquivo->tipo == 'geometria') ? 'selected' : '' }} >Geometria (.kml)</option>
                                     <option value="shapefile" {{ ($arquivo->tipo == 'shapefile') ? 'selected' : '' }} >Shapefile (.zip)</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Arquivo</label>
-                                <input type="file" class="form-control form-control-sm" name="arquivo" id="arquivo" value="{{old('arquivo')}}">
                             </div>
 
                             </br>

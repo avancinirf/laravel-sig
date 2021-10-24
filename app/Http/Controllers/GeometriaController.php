@@ -49,24 +49,28 @@ class GeometriaController extends Controller
     {
         $request->validate($this->geometria->rules(), $this->geometria->feedback());
 
-        $file = $request->file('arquivo');
+        $file     = $request->file('file');
         $file_urn = $file->store("projeto/$request->projeto_id/geometrias");
 
         $geometria = $this->geometria->create([
-            'projeto_id' => $request->projeto_id,
-            'nome' => $file->getClientOriginalName(),
-            'descricao' => $request->descricao,
-            'tipo' => $request->tipo,
-            'opcoes' => $request->opcoes,
-            'arquivo' => $file_urn
+            'projeto_id'    => $request->projeto_id,
+            'nome'          => $request->nome,
+            'nome_original' => $file->getClientOriginalName(),
+            'descricao'     => $request->descricao,
+            'tipo'          => $request->tipo,
+            'opcoes'        => $request->opcoes,
+            'file'          => $file_urn
         ]);
 
         $geometria_arquivo = new GeometriaArquivo;
-        foreach ($request->geometria_arquivos as $arquivo) {
-            $geometria_arquivo->create([
-                'geometria_id' => $geometria->id,
-                'arquivo_id' => $arquivo
-            ]);
+
+        if ($request->geometria_arquivos) {
+            foreach ($request->geometria_arquivos as $arquivo) {
+                $geometria_arquivo->create([
+                    'geometria_id' => $geometria->id,
+                    'arquivo_id'   => $arquivo
+                ]);
+            }
         }
 
         return redirect()->route('geometria.show', $geometria->id);
@@ -143,6 +147,10 @@ class GeometriaController extends Controller
 
         $geometria->fill($request->all());
         $geometria->arquivo = $file_urn;
+        // Atualiza o nome do arquivo caso exista upload ao editar uma geometria.
+        if ($request->file) {
+            $geometria->nome = $request->file->getClientOriginalName();
+        }
         $geometria->save();
 
         $arquivos_para_remover = array_diff($arquivos_antigos, $request->geometria_arquivos);
@@ -200,7 +208,7 @@ class GeometriaController extends Controller
     public function getArquivosPorProjeto($projeto_id)
     {
         $arquivos = Arquivo::where('projeto_id', $projeto_id)->orderBy('nome')->get();
-        return json_decode($arquivos);
+        return $arquivos;
     }
 
 }

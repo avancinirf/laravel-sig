@@ -16,11 +16,15 @@ class CreateArquivosTable extends Migration
         Schema::create('arquivos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('projeto_id');
-            $table->string('nome', '50')->unique();
+            $table->string('nome', '100');
+            $table->string('nome_original', '100');
             $table->text('descricao', 1000)->nullable();
             $table->string('tipo', 100);
-            $table->string('arquivo', 100)->unique();
+            $table->string('file', 100)->unique();
             $table->timestamps();
+
+            // Foreign Key (constraints)
+            $table->foreign('projeto_id')->references('id')->on('projetos')->onDelete('cascade');
         });
     }
 
