@@ -20,20 +20,19 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">Descrição</th>
+                                    <th scope="col">Usuário</th>
                                     <th scope="col">Iniciado em</th>
                                     <th scope="col">Finalizado em</th>
                                     <th scope="col">Público</th>
-                                    <th scope="col">Usuário</th>
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($projetos as $projeto)
-                                    <tr>
-                                        <th scope="row">{{ $projeto->id }}</th>
+                                <tr>
+                                    <th scope="row">{{ $projeto->id }}</th>
                                         <td>{{ $projeto->nome }}</td>
-                                        <td>{{ $projeto->descricao }}</td>
+                                        <td>{{ $projeto->user->name }}</td>
                                         <td>
                                             @if ($projeto->iniciado_em)
                                                 {{ date('d/m/Y', strtotime($projeto->iniciado_em)) }}
@@ -49,14 +48,13 @@
                                         @else
                                             <td>não</td>
                                         @endif
-                                        <td>{{ $projeto->user_id }}</td>
                                         <td>
                                             <form id="form_{{ $projeto->id }}" method="post" action="{{ route('projeto.destroy', ['projeto' => $projeto->id]) }}">
                                                 @method('DELETE')
                                                 @csrf
-                                                <a class="btn btn-sm btn-primary" href="{{ route('projeto.show', $projeto->id) }}"><i class="bi-eye-fill"></i></a>
-                                                <a class="btn btn-sm btn-primary" href="{{ route('projeto.edit', $projeto->id) }}"><i class="bi-pencil-fill"></i></a>
-                                                <a class="btn btn-sm btn-danger"
+                                                <a class="btn btn-sm btn-primary mx-1" href="{{ route('projeto.show', $projeto->id) }}"><i class="bi-eye-fill"></i></a>
+                                                <a class="btn btn-sm btn-primary mx-1" href="{{ route('projeto.edit', $projeto->id) }}"><i class="bi-pencil-fill"></i></a>
+                                                <a class="btn btn-sm btn-danger mx-1"
                                                     onclick="confirm('Tem certeza que deseja remover o projeto {{$projeto->nome}} (ID: {{$projeto->id}})?',
                                                         document.getElementById('form_{{$projeto->id}}').submit()
                                                     )"

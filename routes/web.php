@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () { return view('site.index'); })->name('site.index');
 Route::get('/contato', function () { return view('site.contato'); })->name('site.contato');
 Route::get('/sobre', function () { return view('site.sobre'); })->name('site.sobre');
+Route::get('/servicos', function () { return view('site.servicos'); })->name('site.servicos');
 
 Auth::routes(['verify' => true]);
 

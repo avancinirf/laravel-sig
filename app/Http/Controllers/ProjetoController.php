@@ -20,7 +20,7 @@ class ProjetoController extends Controller
      */
     public function index()
     {
-        $projetos = $this->projeto->orderBy('nome')->paginate(10);
+        $projetos = $this->projeto->with('user')->orderBy('nome')->paginate(10);
         return view('app.projeto.index', ['projetos' => $projetos]);
     }
 
@@ -58,7 +58,7 @@ class ProjetoController extends Controller
      */
     public function show($id)
     {
-        $projeto = $this->projeto->with('arquivos')->find($id);
+        $projeto = $this->projeto->with('user')->with('arquivos')->find($id);
 
         if ($projeto === null) {
             return view('app.projeto.show');
@@ -74,13 +74,12 @@ class ProjetoController extends Controller
      */
     public function edit($id)
     {
-        $usuariosComuns = (new User())->getUsuariosComuns();
-        $projeto = $this->projeto->find($id);
+        $projeto = $this->projeto->with('user')->find($id);
         if (!$projeto) {
             return view('app.projeto.edit');
         }
 
-        return view('app.projeto.edit', ['projeto' => $projeto, 'usuarios' => $usuariosComuns]);
+        return view('app.projeto.edit', ['projeto' => $projeto]);
     }
 
     /**

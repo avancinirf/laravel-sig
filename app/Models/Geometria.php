@@ -8,16 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Geometria extends Model
 {
     use HasFactory;
-    protected $fillable = ['projeto_id', 'nome', 'descricao', 'tipo', 'opcoes', 'arquivo'];
+    protected $fillable = ['projeto_id', 'nome', 'nome_original', 'descricao', 'tipo', 'opcoes', 'file'];
 
     public function rules() {
 
         return [
             'projeto_id'    => 'required|exists:projetos,id',
+            'nome'          => "required|min:3|max:100",
             'descricao'     => "max:1000",
             'tipo'          => 'required',
             'opcoes'        => "max:1000",
-            'arquivo'       => "required|file|mimes:xml",
+            'file'          => "required|file|mimes:xml",
         ];
     }
 
@@ -25,6 +26,9 @@ class Geometria extends Model
         return [
             'projeto_id.required'    => 'Indicação do projeto é obrigatória',
             'projeto_id.exists'      => 'Projeto informado não existe',
+            'nome.required'          => 'Nome do arquivo é obrigatório',
+            'nome.min'               => 'Nome do arquivo deve ter no mínimo 3 caracteres',
+            'nome.max'               => 'Nome do arquivo deve ter no máximo 100 caracteres',
             'tipo'                   => 'Tipo de arquivo é obrigatório.',
             'descricao.max'          => 'A descrição possui no máximo 1000 de caracteres.',
             'opcoes.max'             => 'As opções possuem no máximo 1000 de caracteres.',

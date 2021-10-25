@@ -42,13 +42,34 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('site.sobre') }}">{{ __('Sobre') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('site.servicos') }}">{{ __('Serviços') }}</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{{ __('Blog') }}</a>
+                        </li>
+
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('site.contato') }}">{{ __('Contato') }}</a>
                         </li>
+                        -->
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link icone-midia-social" href="#"><i class="bi bi-linkedin"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link icone-midia-social" href="#"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="nav-item mr-2">
+                            <a class="nav-link icone-midia-social" href="#"><i class="bi bi-instagram"></i></a>
+                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -113,12 +134,36 @@
 
         <main class="py-0">
 
-        <div id="spinner-sistema" class="spinner-grow text-info" role="status">
-            <span class="sr-only" >Loading...</span>
-        </div>
+            <div id="spinner-sistema" class="spinner-grow text-info" role="status">
+                <span class="sr-only" >Loading...</span>
+            </div>
 
             @yield('content')
+
         </main>
+
+        <footer>
+                <div class="row d-flex justify-content-between align-items-center">
+                    <div class="col col-8 footer-col-1">
+                        <label class="footer-title">Consig Soluções Ambientais</label>
+                        <label class="footer-text">Rua Carumbé, 11</label>
+                        <label class="footer-text">Rio de Janeiro, RJ 21.755-140</label>
+                        <label class="footer-text text-primary">(11) 5555-5555</label>
+                    </div>
+                    <div class="col col-2 footer-col-2">
+                        <label class="footer-title">Nosso trabalho</label>
+                        <label class="footer-text"><a href="#">Sobre</a></label>
+                        <label class="footer-text"><a href="#">Iniciativas</a></label>
+                        <label class="footer-text"><a href="#">Entre em ação</a></label>
+                    </div>
+                    <div class="col col-2 footer-col-3">
+                        <label class="footer-title"><a>Siga-nos</label>
+                        <label class="footer-text"><a href="#">Twitter</a></label>
+                        <label class="footer-text"><a href="#">LinkedIn</a></label>
+                        <label class="footer-text"><a href="#">Facebook</a></label>
+                    </div>
+                </div>
+        </footer>
     </div>
 </body>
 </html>

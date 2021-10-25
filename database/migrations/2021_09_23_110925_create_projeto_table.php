@@ -17,11 +17,15 @@ class CreateProjetoTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('nome', '100')->unique();
+            $table->string('tipo', '40');
             $table->text('descricao')->nullable();
             $table->date('iniciado_em')->nullable();
             $table->date('finalizado_em')->nullable();
             $table->boolean('publico')->default(false);
             $table->timestamps();
+
+            // Foreign Key (constraints)
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

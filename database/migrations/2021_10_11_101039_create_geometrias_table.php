@@ -16,12 +16,16 @@ class CreateGeometriasTable extends Migration
         Schema::create('geometrias', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('projeto_id');
-            $table->string('nome', '255');
+            $table->string('nome', '100');
+            $table->string('nome_original', '100');
             $table->text('descricao', 1000)->nullable();
             $table->string('tipo', 100)->default('kml');
-            $table->string('arquivo', 100)->unique();
+            $table->string('file', 100)->unique();
             $table->text('opcoes', 1000)->nullable();
             $table->timestamps();
+
+            // Foreign Key (constraints)
+            $table->foreign('projeto_id')->references('id')->on('projetos')->onDelete('cascade');
         });
     }
 

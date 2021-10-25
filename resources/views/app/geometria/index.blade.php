@@ -20,8 +20,8 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Nome</th>
-                                    <th scope="col">Descrição</th>
                                     <th scope="col">Tipo</th>
+                                    <th scope="col">Geometria (nome original)</th>
                                     <th scope="col">Criado em</th>
                                     <th scope="col">Atualizado em</th>
                                     <th scope="col">Ações</th>
@@ -32,8 +32,8 @@
                                 <tr>
                                     <th scope="row">{{ $geometria->id }}</th>
                                     <td>{{ $geometria->nome }}</td>
-                                    <td>{{ $geometria->descricao }}</td>
                                     <td>{{ $geometria->tipo }}</td>
+                                    <td><a href="{{route('geometria.download', $geometria->id)}}"><i class="bi bi-box-arrow-down"></i></a> {{ $geometria->nome_original }}</td>
                                     <td>
                                         @if ($geometria->created_at)
                                             {{ date('d/m/Y', strtotime($geometria->created_at)) }}

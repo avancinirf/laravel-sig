@@ -22,8 +22,11 @@
                 @else
                 <div class="card">
                     <div class="card-header">
-                        <h4><b>Projeto: {{ $projeto->nome }}</b>
-                            <a class="btn btn-sm btn-success float-right" href="{{ route('projeto.create') }}">
+                        <h4 class="mb-0"><b>Projeto: {{ $projeto->nome }}</b>
+                            <a class="btn btn-sm btn-primary float-right" href="{{ route('projeto.edit', $projeto->id) }}">
+                                <i class="bi-pencil-fill"></i>
+                            </a>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('projeto.create') }}">
                                 <i class="bi-plus-lg"></i>
                             </a>
                         </h4>
@@ -36,12 +39,16 @@
                                 <input type="text" class="form-control form-control-sm" value="{{ $projeto->id }}">
                             </div>
                             <div class="form-group">
+                                <label class="form-label">Tipo</label>
+                                <input type="text" class="form-control form-control-sm" value="{{ $projeto->tipo }}">
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Nome</label>
                                 <input type="text" class="form-control form-control-sm" value="{{ $projeto->nome }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Usuário</label>
-                                <input type="text" class="form-control form-control-sm" value="{{ $projeto->user_id }}">
+                                <input type="text" class="form-control form-control-sm" value="{{ $projeto->user->name }}">
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Descrição</label>
@@ -71,7 +78,7 @@
                                 <ul class="lista-show-elementos">
                                 @foreach ($projeto->arquivos as $arquivo)
                                     <!--<li>( ID: {{$arquivo->id}} ) - {{$arquivo->nome}} - <a href="{{asset('storage/'.$arquivo->arquivo)}}">{{$arquivo->nome}}</a></li>-->
-                                    <li><a href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a> {{ $arquivo->nome . '.' . explode('.', $arquivo->arquivo)[1] }}</li>
+                                    <li><a href="{{route('arquivo.download', $arquivo->id)}}"><i class="bi bi-box-arrow-down"></i></a> {{ $arquivo->nome_original }}</li>
                                 @endforeach
                                 </ul>
                             @endif
