@@ -14,7 +14,13 @@
                     </div>
                 @endif
                 <div class="card">
-                    <div class="card-header"><h4><b>Editar geometria</b></h4></div>
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="bi-pencil mr-3"></i> <b>Geometria: {{ $geometria->nome }}</b>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('geometria.create') }}">
+                                <i class="bi-plus-lg"></i>
+                            </a>
+                        </h4>
+                    </div>
 
                     <div class="card-body">
                         @if (!isset($geometria))

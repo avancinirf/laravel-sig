@@ -40,10 +40,10 @@
                     <label class="modal-menu-mapa-body-label"><b>NOME:</b> {{ $projeto->nome }} </label>
                     <label class="modal-menu-mapa-body-label"><b>DESCRIÇÃO:</b> {{ $projeto->descricao }}</label>
                     @if($projeto->iniciado_em || $projeto->finalizado_em)
-                    <label class="modal-menu-mapa-body-label"><b>INICIADO EM:</b> {{ $projeto->iniciado_em->format('d/m/Y') }} </label>
-                    <label class="modal-menu-mapa-body-label"><b>FINALIZADO EM:</b> {{ $projeto->finalizado_em->format('d/m/Y') }} </label>
+                    <label class="modal-menu-mapa-body-label"><b>INICIADO EM:</b> {{ $projeto->iniciado_em }} </label>
+                    <label class="modal-menu-mapa-body-label"><b>FINALIZADO EM:</b> {{ $projeto->finalizado_em }} </label>
                     @endif
-                    <label class="modal-menu-mapa-body-label"><b>ÚLTIMA ATUALIZAÇÃO:</b> {{ $projeto->updated_at->format('d/m/Y') }} </label>
+                    <label class="modal-menu-mapa-body-label"><b>ÚLTIMA ATUALIZAÇÃO:</b> {{ $projeto->updated_at }} </label>
 
                     <br><br>
                     @if(count($projeto->arquivos) > 0)
@@ -55,10 +55,10 @@
                         </ul>
                     @endif
                     @if(count($projeto->geometrias) > 0)
-                        <label class="modal-menu-mapa-body-subtitulo"><b>GEOMETRIAS RELACIONADOS</b></label>
+                        <label class="modal-menu-mapa-body-subtitulo"><b>GEOMETRIAS RELACIONADAS</b></label>
                         <ul class="modal-map-menu-list">
                             @foreach($projeto->geometrias as $geometria)
-                                <a href="/app/GEOMETRIA/download/{{$geometria->id}}"><li><i class="bi bi-box-arrow-down"></i> {{$geometria->nome}} </li></a>
+                                <a href="/app/geometria/download/{{$geometria->id}}"><li><i class="bi bi-box-arrow-down"></i> {{$geometria->nome}} </li></a>
                             @endforeach
                         </ul>
                     @endif

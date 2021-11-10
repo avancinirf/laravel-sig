@@ -20,6 +20,7 @@ Route::get('/', function () { return view('site.index'); })->name('site.index');
 Route::get('/contato', function () { return view('site.contato'); })->name('site.contato');
 Route::get('/sobre', function () { return view('site.sobre'); })->name('site.sobre');
 Route::get('/servicos', function () { return view('site.servicos'); })->name('site.servicos');
+Route::get('/blog', function () { return view('site.blog'); })->name('site.blog');
 
 Auth::routes(['verify' => true]);
 

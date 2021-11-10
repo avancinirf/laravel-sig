@@ -48,7 +48,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{{ __('Blog') }}</a>
+                            <a class="nav-link" href="{{ route('site.blog') }}">{{ __('Blog') }}</a>
                         </li>
 
                         <!--
@@ -144,19 +144,19 @@
 
         <footer>
                 <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col col-8 footer-col-1">
+                    <div class="col col-md-8 footer-col-1">
                         <label class="footer-title">Consig Soluções Ambientais</label>
                         <label class="footer-text">Rua Carumbé, 11</label>
                         <label class="footer-text">Rio de Janeiro, RJ 21.755-140</label>
                         <label class="footer-text text-primary">(11) 5555-5555</label>
                     </div>
-                    <div class="col col-2 footer-col-2">
+                    <div class="col col-md-2 footer-col-2">
                         <label class="footer-title">Nosso trabalho</label>
                         <label class="footer-text"><a href="#">Sobre</a></label>
                         <label class="footer-text"><a href="#">Iniciativas</a></label>
                         <label class="footer-text"><a href="#">Entre em ação</a></label>
                     </div>
-                    <div class="col col-2 footer-col-3">
+                    <div class="col col-md-2 footer-col-3">
                         <label class="footer-title"><a>Siga-nos</label>
                         <label class="footer-text"><a href="#">Twitter</a></label>
                         <label class="footer-text"><a href="#">LinkedIn</a></label>

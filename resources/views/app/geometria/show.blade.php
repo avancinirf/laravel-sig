@@ -23,7 +23,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h4><b>Geometria: {{ $geometria->nome }}</b>
-                            <a class="btn btn-sm btn-success float-right" href="{{ route('geometria.create') }}">
+                            <a class="btn btn-sm btn-primary float-right" href="{{ route('geometria.edit', $geometria->id) }}">
+                                <i class="bi-pencil-fill"></i>
+                            </a>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('geometria.create') }}">
                                 <i class="bi-plus-lg"></i>
                             </a>
                         </h4>

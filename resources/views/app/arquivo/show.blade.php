@@ -23,7 +23,10 @@
                 <div class="card">
                     <div class="card-header">
                         <h4><b>Arquivo: {{ $arquivo->nome }}</b>
-                            <a class="btn btn-sm btn-success float-right" href="{{ route('arquivo.create') }}">
+                            <a class="btn btn-sm btn-primary float-right" href="{{ route('arquivo.edit', $arquivo->id) }}">
+                                <i class="bi-pencil-fill"></i>
+                            </a>
+                            <a class="btn btn-sm btn-success float-right mr-2" href="{{ route('arquivo.create') }}">
                                 <i class="bi-plus-lg"></i>
                             </a>
                         </h4>

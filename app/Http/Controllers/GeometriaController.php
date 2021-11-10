@@ -135,22 +135,7 @@ class GeometriaController extends Controller
             $request->validate($geometria->rules(), $geometria->feedback());
         }
 
-        if ($request->file('arquivo')) {
-            Storage::disk('local')->delete("/$geometria->arquivo");
-            $file     = $request->file('arquivo');
-            $projeto_id  = $request->projeto_id ?? $geometria->project_id;
-            $file_urn = $file->store("projeto/$request->projeto_id/geometrias");
-
-        } else {
-            $file_urn = $geometria->arquivo;
-        }
-
         $geometria->fill($request->all());
-        $geometria->arquivo = $file_urn;
-        // Atualiza o nome do arquivo caso exista upload ao editar uma geometria.
-        if ($request->file) {
-            $geometria->nome = $request->file->getClientOriginalName();
-        }
         $geometria->save();
 
         $arquivos_para_remover = array_diff($arquivos_antigos, $request->geometria_arquivos);
@@ -197,8 +182,8 @@ class GeometriaController extends Controller
         $projeto = Projeto::find($geometria->projeto_id);
 
         if (auth()->user()->admin || auth()->user()->id == $projeto->user_id) {
-            $path = storage_path("/app/$geometria->arquivo");
-            return response()->download($path, $geometria->nome);
+            $path = storage_path("/app/$geometria->file");
+            return response()->download($path, $geometria->nome_original);
         }
     }
 

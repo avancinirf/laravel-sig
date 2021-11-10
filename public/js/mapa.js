@@ -128,7 +128,8 @@
 
         function preencheModalLayer(nomeGeometria, geometria, atributos) {
 
-            if (nomeGeometria.split('.')[0] == $modalLayerTitle.html()) return;
+            // todo: corrigir (se for igual ao ultimo, dar return)
+            //if (nomeGeometria == $modalLayerTitle.html()) return;
 
             let textoModalBody = '';
 
@@ -136,17 +137,17 @@
                 textoModalBody += `<label class="modal-layer-mapa-body-label"><b>${key.toUpperCase()}:</b> ${value}</label><br>`;
             }
             if (geometria.arquivos) {
-                textoModalBody += `<label class="modal-layer-mapa-body-subtitulo"><b>ARQUIVOS RELACIONADOS</b></label>
+                textoModalBody += `<label class="modal-layer-mapa-body-subtitulo"><b>ARQUIVOS RELACIONADOS (${geometria.arquivos.length})</b></label>
                                     <ul class="modal-map-popup-list">`;
                 geometria.arquivos.forEach(function(arquivo) {
-                    const nome = `${arquivo.nome}.${arquivo.arquivo.split('.')[1]}`;
+                    const nome = `${arquivo.nome}.${arquivo.file.split('.')[1]}`;
                     textoModalBody += `<a href="/app/arquivo/download/${arquivo.id}"><li><i class="bi bi-box-arrow-down"></i> ${nome}</li></a>`;
                 });
                 textoModalBody += '</ul>';
             }
 
             if (!nomeGeometria.length) nomeGeometria = 'Nome da geometria não informado!!!';
-            if (!atributos.length && !geometria.arquivos.length) textoModalBody = 'Nenhuma informação ou arquivo disponível para a geometria selecionada!!!';
+            if (jQuery.isEmptyObject(atributos) && !geometria.arquivos.length) textoModalBody = 'Nenhuma informação ou arquivo disponível para a geometria selecionada!!!';
 
             $modalLayerTitle.html(nomeGeometria.split('.')[0]);
             $modalLayerBody.html(textoModalBody);
